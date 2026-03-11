@@ -1,0 +1,68 @@
+<div id="loginPage">
+  <div class="card">
+    <h2>🐝 Lucky Bee POS Lite</h2>
+
+    <input id="user" placeholder="Username">
+    <input id="pass" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p>admin / 1234</p>
+    <p>cashier / 1111</p>
+  </div>
+</div>
+
+<div id="app" style="display:none">
+
+<header>
+  <b>Lucky Bee POS</b>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3>Dashboard</h3>
+<p>Money (K): <span id="money">-</span></p>
+<p>Items Sold: <span id="sales">-</span></p>
+<p>Products: <span id="products">-</span></p>
+</div>
+
+<div class="card">
+<h3>Add Product</h3>
+
+<input id="pname" placeholder="Product name">
+<input id="pprice" placeholder="Price (K)">
+<input id="pstock" placeholder="Stock">
+
+<button onclick="addProduct()">Add Product</button>
+</div>
+
+<div class="card">
+<input id="search" placeholder="Search inventory..." onkeyup="render()">
+</div>
+
+<div class="card">
+<h3>Inventory</h3>
+<div id="inventory"></div>
+</div>
+
+<div class="card">
+<h3>Cart</h3>
+<div id="cart">Cart empty</div>
+<button onclick="checkout()">Checkout</button>
+</div>
+
+<div class="card">
+<h3>Receipt</h3>
+<div id="receipt">No receipt yet</div>
+<button onclick="printReceipt()">Print</button>
+</div>
+
+</div>
+
+<footer>
+© 2026 Lucky Bee POS — All Rights Reserved
+</footer>
+
+</div>
